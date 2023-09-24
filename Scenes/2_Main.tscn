@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1cl7g2e6lwuy"]
+
+[ext_resource type="Script" path="res://Scripts/Main Menu.gd" id="1_j4qum"]
+
+[node name="2_Main" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Main Menu" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 427.0
+offset_top = 248.0
+offset_right = -427.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j4qum")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Main Menu"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Main Menu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CanvasLayer/Main Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+horizontal_alignment = 1
+
+[node name="Button_host" type="Button" parent="CanvasLayer/Main Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Host"
+
+[node name="Button_connect" type="Button" parent="CanvasLayer/Main Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Join"
+
+[node name="ConnectionString" type="LineEdit" parent="CanvasLayer/Main Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Enter"
+alignment = 1
+editable = false
+
+[connection signal="pressed" from="CanvasLayer/Main Menu/MarginContainer/VBoxContainer/Button_host" to="CanvasLayer/Main Menu" method="_on_button_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main Menu/MarginContainer/VBoxContainer/Button_connect" to="CanvasLayer/Main Menu" method="_on_button_connect_pressed"]

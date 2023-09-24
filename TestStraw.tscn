@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://js2ilx0rubdc"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_m640f"]
+size = Vector3(0.1, 0.75, 0.1)
+
+[node name="TestStraw" type="MeshInstance3D"]
+transform = Transform3D(0.971086, 0, 0, 0, 0.971086, 0, 0, 0, 0.971086, -0.00197312, 0.129126, 0.000211537)
+mesh = SubResource("PrismMesh_m640f")

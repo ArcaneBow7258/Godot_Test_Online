@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://buqqy7b5vh05"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_23k7o"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_ura5q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbfxk"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jveud"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u1uxw"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_mgojo"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+properties/0/watch = false
+properties/1/path = NodePath("Pivot:rotation")
+properties/1/spawn = true
+properties/1/sync = true
+properties/1/watch = false
+properties/2/path = NodePath("Camera3D:rotation")
+properties/2/spawn = true
+properties/2/sync = true
+properties/2/watch = false
+
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
+script = ExtResource("1_23k7o")
+SPEED = 7.0
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Pointer" type="MeshInstance3D" parent="Pivot"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 1, 0, 1.5, -0.497)
+mesh = SubResource("PrismMesh_ura5q")
+skeleton = NodePath("../Model")
+surface_material_override/0 = SubResource("StandardMaterial3D_qbfxk")
+
+[node name="Model" type="MeshInstance3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_jveud")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_u1uxw")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 3.5, 3)
+size = 7.0
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_mgojo")

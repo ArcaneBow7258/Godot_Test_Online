@@ -1,0 +1,18 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1695586804
+icon.svg::CompressedTexture2D::6253950856289192671::1694918012::1694918017::1::::<><>::
+simplefx-alpha.png::CompressedTexture2D::5770104559174930785::1695509454::1695586804::1::::<><>::
+TestStraw.tscn::PackedScene::670512651918044924::1694998372::0::1::::<><>::
+trashmobz-alpha.png::CompressedTexture2D::1949708984002275576::1695509443::1695586804::1::::<><>::
+::res://Scenes/::1695245595
+Follower.tscn::PackedScene::2484938920803657075::1695245595::0::1::::<><>::res://Scripts/Follower.gd
+Main.tscn::PackedScene::6806715439510708372::1695245595::0::1::::<><>::res://Scripts/Main.gd<>uid://drbougulv8r0q::::res://Shaders/Grass.tres<>uid://js2ilx0rubdc::::res://TestStraw.tscn<>res://Scripts/Main Menu.gd<>uid://bbnyt0urff6gt::::res://Scenes/Follower.tscn
+Player.tscn::PackedScene::112477753386474292::1695245595::0::1::::<><>::res://Scripts/Player.gd
+::res://Scripts/::1695245593
+Follower.gd::GDScript::-1::1695241831::0::1::::<>CharacterBody3D<>::
+Main Menu.gd::GDScript::-1::1695245593::0::1::::<>PanelContainer<>::
+Main.gd::GDScript::-1::1695243219::0::1::::<>Node<>::
+Player.gd::GDScript::-1::1695245437::0::1::::<>CharacterBody3D<>::
+::res://Shaders/::1695245817
+Grass.gdshader::Shader::-1::1695245817::0::1::::<><>::
+Grass.tres::VisualShader::8355422871022101342::1695244935::0::1::::<><>::
