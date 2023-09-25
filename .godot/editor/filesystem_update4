@@ -3,3 +3,7 @@ res://Shaders/Grass.gdshader
 res://Scenes/2_Main.tscn
 res://Scripts/Main Menu.gd
 res://Scenes/2_player.tscn
+res://Scenes/2_Enemy.tscn
+res://Scripts/Player.gd
+res://Scenes/Player.tscn
+res://Scripts/2_player.gd

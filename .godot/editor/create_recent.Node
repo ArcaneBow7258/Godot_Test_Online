@@ -1,3 +1,7 @@
+TileMap
+Camera2D
+TextureRect
+CollisionShape2D
 AnimatedSprite2D
 CharacterBody2D
 MultiplayerSynchronizer
