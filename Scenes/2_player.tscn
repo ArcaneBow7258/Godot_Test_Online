@@ -1,7 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://ca3o1f3xkx0e2"]
+[gd_scene load_steps=24 format=3 uid="uid://ca3o1f3xkx0e2"]
 
 [ext_resource type="Texture2D" uid="uid://b7a4shox8f5af" path="res://char.png" id="1_2m2ir"]
 [ext_resource type="Script" path="res://Scripts/2_player.gd" id="1_5tk7e"]
+[ext_resource type="Texture2D" uid="uid://ektgduscsrpv" path="res://Sprite-0001.png" id="3_4uqcy"]
+[ext_resource type="Texture2D" uid="uid://dvppiwr5c3p52" path="res://Sprite-0002.png" id="4_7r073"]
+[ext_resource type="Texture2D" uid="uid://cvnm57hmvxneg" path="res://Sprite-0003.png" id="5_qy3b6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xsxri"]
 atlas = ExtResource("1_2m2ir")
@@ -159,22 +162,42 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q7kj"]
-size = Vector2(11.5, 10.25)
+size = Vector2(11.5, 10.125)
 
 [node name="2_Player" type="CharacterBody2D"]
 scale = Vector2(4, 4)
-collision_mask = 8
+collision_mask = 4
+platform_on_leave = 2
+platform_floor_layers = 4294967264
 script = ExtResource("1_5tk7e")
 SPEED = 250.0
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1, 1.145)
 sprite_frames = SubResource("SpriteFrames_vhjid")
 animation = &"left_m"
 autoplay = "down_s"
+metadata/_edit_lock_ = true
 
-[node name="Collider" type="CollisionShape2D" parent="."]
-position = Vector2(-0.25, 3.875)
+[node name="Hitbox" type="CollisionShape2D" parent="." groups=["Friendly"]]
+position = Vector2(0, 4.118)
 shape = SubResource("RectangleShape2D_2q7kj")
+metadata/_edit_lock_ = true
 
 [node name="Camera" type="Camera2D" parent="."]
+
+[node name="Light_Point" type="PointLight2D" parent="."]
+color = Color(1, 0.788235, 0.458824, 0.756863)
+texture = ExtResource("4_7r073")
+
+[node name="Follower_mouse" type="Node2D" parent="."]
+
+[node name="Light_Cone" type="PointLight2D" parent="Follower_mouse"]
+color = Color(1, 0.788235, 0.458824, 0.756863)
+shadow_enabled = true
+texture = ExtResource("3_4uqcy")
+offset = Vector2(32, 0)
+
+[node name="Arrow" type="Sprite2D" parent="Follower_mouse"]
+rotation = 1.5708
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_qy3b6")

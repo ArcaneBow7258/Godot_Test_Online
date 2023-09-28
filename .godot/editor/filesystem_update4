@@ -1,9 +1,9 @@
-res://Shaders/Grass.tres
-res://Shaders/Grass.gdshader
-res://Scenes/2_Main.tscn
-res://Scripts/Main Menu.gd
 res://Scenes/2_player.tscn
-res://Scenes/2_Enemy.tscn
-res://Scripts/Player.gd
-res://Scenes/Player.tscn
+res://Shaders/Grass.gdshader
+res://Shaders/Grass.tres
+res://Scenes/2_Main.tscn
 res://Scripts/2_player.gd
+res://Scenes/2_Enemy.tscn
+res://Scripts/Enemy_AI.gd
+res://Scripts/EnemyController.gd
+res://Scripts/Enemy_Animation.gd

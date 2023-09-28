@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var camera = $Camera
 @export var SPEED = 5.0
 @onready var sprite = $Sprite
+@onready var follower_mouse = $Follower_mouse
+
 var animation_string = "down_s"
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
@@ -29,6 +31,7 @@ func move_mouse():
 #	#Clockwise starting  at (1, 0)
 	camera.draw
 	var angle = mousePosNormalized.angle() * 180 / PI
+	follower_mouse.rotation_degrees = angle
 	#print(angle)
 	if(45 > angle and angle > -45):
 		return "right"
@@ -39,18 +42,6 @@ func move_mouse():
 	return "left"
 func move_wasd(delta):
 	#if not is_multiplayer_authority(): return
-	# Add the gravity.
-	
-#	if not is_on_floor():
-#		velocity.y -= gravity * delta
-#
-#	# Handle Jump.
-#	if Input.is_action_just_pressed("move_jump") and is_on_floor():
-#		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	#negative, pos, negative, pos
 	var input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var direction = (Vector2(input_dir.x,input_dir.y)).normalized()
 	if direction:
