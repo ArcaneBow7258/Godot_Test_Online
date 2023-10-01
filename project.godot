@@ -72,6 +72,10 @@ move_click={
 2d_physics/layer_5="Enemy_Proj"
 avoidance/layer_1="Bad_Floor"
 
+[navigation]
+
+2d/default_link_connection_radius=64
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

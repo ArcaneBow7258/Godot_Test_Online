@@ -87,7 +87,7 @@ animations = [{
 radius = 6.08276
 
 [node name="2_Enemy" type="CharacterBody2D"]
-scale = Vector2(4, 4)
+scale = Vector2(3, 3)
 collision_layer = 2
 collision_mask = 7
 platform_on_leave = 2
@@ -106,5 +106,6 @@ scale = Vector2(1.00064, 0.939027)
 shape = SubResource("CircleShape2D_alfnx")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-target_desired_distance = 100.0
+target_desired_distance = 128.0
+path_postprocessing = 1
 script = ExtResource("2_lbvmw")

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695855412
+::res://::1696104300
 char.png::CompressedTexture2D::4634257007570710805::1644696784::1695587542::1::::<><>::
 icon.svg::CompressedTexture2D::6253950856289192671::1694918012::1694918017::1::::<><>::
 simplefx-alpha.png::CompressedTexture2D::5770104559174930785::1695509454::1695586804::1::::<><>::
@@ -8,24 +8,46 @@ Sprite-0002.png::CompressedTexture2D::8665119658173848531::1695841802::169584180
 Sprite-0003.png::CompressedTexture2D::6274427864453046538::1695855412::1695855413::1::::<><>::
 TestStraw.tscn::PackedScene::670512651918044924::1694998372::0::1::::<><>::
 trashmobz-alpha.png::CompressedTexture2D::1949708984002275576::1695509443::1695586804::1::::<><>::
-::res://Scenes/::1695841836
-2_Enemy.tscn::PackedScene::6137030986768617245::1695587265::0::1::::<><>::uid://ca3o1f3xkx0e2
-2_Main.tscn::PackedScene::8989026130575099168::1695841818::0::1::::<><>::res://Scripts/Main Menu.gd<>uid://dm3a0yusuahnw::::res://Tilesets/ground tiles/new tiles/Tall Grass hill tiles v.2.png<>uid://ca3o1f3xkx0e2::::res://Scenes/2_player.tscn
-2_player.tscn::PackedScene::4831540719970719167::1695841836::0::1::::<><>::uid://b7a4shox8f5af::::res://char.png<>res://Scripts/2_player.gd<>uid://ektgduscsrpv::::res://Sprite-0001.png<>uid://dvppiwr5c3p52::::res://Sprite-0002.png
+::res://Scenes/::1696104278
+2_Enemy.tscn::PackedScene::6137030986768617245::1696104182::0::1::::<><>::uid://21pol7vogaf5::::res://trashmobz-alpha.png<>res://Scripts/Enemy_Animation.gd<>res://Scripts/Enemy_AI.gd
+2_Main.tscn::PackedScene::8989026130575099168::1696104278::0::1::::<><>::res://Scripts/Main Menu.gd<>uid://dm3a0yusuahnw::::res://Tilesets/ground tiles/new tiles/Tall Grass hill tiles v.2.png<>uid://ca3o1f3xkx0e2::::res://Scenes/2_player.tscn<>uid://cto3aekiaouob::::res://Scenes/2_Enemy.tscn
+2_player.tscn::PackedScene::4831540719970719167::1696104182::0::1::::<><>::uid://b7a4shox8f5af::::res://char.png<>res://Scripts/2_player.gd<>uid://ektgduscsrpv::::res://Sprite-0001.png<>uid://dvppiwr5c3p52::::res://Sprite-0002.png<>uid://cvnm57hmvxneg::::res://Sprite-0003.png
 Follower.tscn::PackedScene::2484938920803657075::1695245595::0::1::::<><>::res://Scripts/Follower.gd
 Main.tscn::PackedScene::6806715439510708372::1695245595::0::1::::<><>::res://Scripts/Main.gd<>uid://drbougulv8r0q
 Player.tscn::PackedScene::112477753386474292::1695595473::0::1::::<><>::res://Scripts/Player.gd
-::res://Scripts/::1695841499
-2_player.gd::GDScript::-1::1695841499::0::1::::<>CharacterBody2D<>::
+::res://Scripts/::1695864658
+2_player.gd::GDScript::-1::1695864436::0::1::::<>CharacterBody2D<>::
+EnemyController.gd::GDScript::-1::1695860164::0::1::::<>Node<>::
+Enemy_AI.gd::GDScript::-1::1695864336::0::1::::<>NavigationAgent2D<>::
+Enemy_Animation.gd::GDScript::-1::1695864658::0::1::::<>AnimatedSprite2D<>::
 Follower.gd::GDScript::-1::1695241831::0::1::::<>CharacterBody3D<>::
 Main Menu.gd::GDScript::-1::1695586871::0::1::::<>PanelContainer<>::
 Main.gd::GDScript::-1::1695243219::0::1::::<>Node<>::
 Player.gd::GDScript::-1::1695588355::0::1::::<>CharacterBody3D<>::
-::res://Shaders/::1695841840
-Grass.gdshader::Shader::-1::1695841840::0::1::::<><>::
-Grass.tres::VisualShader::8355422871022101342::1695837648::0::1::::<><>::
-::res://Tilesets/::1695592812
+::res://Sprites/::1696101908
+Basic Charakter Actions.png::CompressedTexture2D::1104192021239037443::1647017940::1696101908::1::::<><>::
+Egg_And_Nest.png::CompressedTexture2D::5249223640764994282::1688792516::1696101908::1::::<><>::
+Fences.png::CompressedTexture2D::2857097147422823431::1640171732::1696101908::1::::<><>::
+Free Chicken Sprites.png::CompressedTexture2D::3903436119713745590::1686901518::1696101908::1::::<><>::
+Free Cow Sprites.png::CompressedTexture2D::2461738801895388203::1642842810::1696101908::1::::<><>::
+Water.png::CompressedTexture2D::9055519607059172025::1640171322::1696101908::1::::<><>::
+Wooden House.png::CompressedTexture2D::164657785269949215::1640172846::1696101908::1::::<><>::
+::res://Sprites/Items/::1696101908
+Basic Furniture.png::CompressedTexture2D::6300505540640110507::1640172806::1696101908::1::::<><>::
+Basic Grass Biom things 1.png::CompressedTexture2D::6708215012310504735::1641385164::1696101908::1::::<><>::
+Basic Plants.png::CompressedTexture2D::7565243944490792289::1640170444::1696101908::1::::<><>::
+Basic tools and meterials.png::CompressedTexture2D::5774586861594557718::1647018488::1696101908::1::::<><>::
+Chest.png::CompressedTexture2D::1863918181524169623::1643115086::1696101908::1::::<><>::
+Egg item.png::CompressedTexture2D::150856414942646936::1686902478::1696101908::1::::<><>::
+Free_Chicken_House.png::CompressedTexture2D::6281184080346979764::1688792342::1696101908::1::::<><>::
+Paths.png::CompressedTexture2D::8623993803672040266::1642841964::1696101908::1::::<><>::
+Simple Milk and grass item.png::CompressedTexture2D::584971839619199383::1642922286::1696101908::1::::<><>::
+Wood Bridge.png::CompressedTexture2D::7187912365293978547::1642842030::1696101908::1::::<><>::
+::res://Tilesets/::1696101908
 Fences.png::CompressedTexture2D::3087391947431511335::1640207732::1695592812::1::::<><>::
+Grass.png::CompressedTexture2D::7127301427194784789::1688619934::1696101908::1::::<><>::
+Hills.png::CompressedTexture2D::5172323003111457542::1640165184::1696101908::1::::<><>::
+Tilled Dirt.png::CompressedTexture2D::5520250195688673516::1688615700::1696101908::1::::<><>::
 Water.png::CompressedTexture2D::9020252986948452986::1640207322::1695592812::1::::<><>::
 Wooden House.png::CompressedTexture2D::4977752399833567315::1640208846::1695592812::1::::<><>::
 ::res://Tilesets/ground tiles/::1695587354
