@@ -1,29 +1,32 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696104300
+::res://::1696214232
 char.png::CompressedTexture2D::4634257007570710805::1644696784::1695587542::1::::<><>::
 icon.svg::CompressedTexture2D::6253950856289192671::1694918012::1694918017::1::::<><>::
+README.md::TextFile::-1::1696180561::0::1::::<><>::
 simplefx-alpha.png::CompressedTexture2D::5770104559174930785::1695509454::1695586804::1::::<><>::
 Sprite-0001.png::CompressedTexture2D::302563679006096199::1695841309::1695841310::1::::<><>::
 Sprite-0002.png::CompressedTexture2D::8665119658173848531::1695841802::1695841805::1::::<><>::
 Sprite-0003.png::CompressedTexture2D::6274427864453046538::1695855412::1695855413::1::::<><>::
 TestStraw.tscn::PackedScene::670512651918044924::1694998372::0::1::::<><>::
 trashmobz-alpha.png::CompressedTexture2D::1949708984002275576::1695509443::1695586804::1::::<><>::
-::res://Scenes/::1696104278
-2_Enemy.tscn::PackedScene::6137030986768617245::1696104182::0::1::::<><>::uid://21pol7vogaf5::::res://trashmobz-alpha.png<>res://Scripts/Enemy_Animation.gd<>res://Scripts/Enemy_AI.gd
-2_Main.tscn::PackedScene::8989026130575099168::1696104278::0::1::::<><>::res://Scripts/Main Menu.gd<>uid://dm3a0yusuahnw::::res://Tilesets/ground tiles/new tiles/Tall Grass hill tiles v.2.png<>uid://ca3o1f3xkx0e2::::res://Scenes/2_player.tscn<>uid://cto3aekiaouob::::res://Scenes/2_Enemy.tscn
-2_player.tscn::PackedScene::4831540719970719167::1696104182::0::1::::<><>::uid://b7a4shox8f5af::::res://char.png<>res://Scripts/2_player.gd<>uid://ektgduscsrpv::::res://Sprite-0001.png<>uid://dvppiwr5c3p52::::res://Sprite-0002.png<>uid://cvnm57hmvxneg::::res://Sprite-0003.png
+::res://Scenes/::1696214222
+2_Enemy.tscn::PackedScene::6137030986768617245::1696214174::0::1::::<><>::uid://21pol7vogaf5::::res://trashmobz-alpha.png<>res://Scripts/Enemy_Animation.gd<>res://Scripts/Enemy_AI.gd
+2_Main.tscn::PackedScene::8989026130575099168::1696214222::0::1::::<><>::res://Scripts/Main Menu.gd<>uid://dm3a0yusuahnw::::res://Tilesets/ground tiles/new tiles/Tall Grass hill tiles v.2.png<>uid://ca3o1f3xkx0e2::::res://Scenes/2_player.tscn<>res://Scripts/TileLogic.gd<>uid://d1rqipvutn4x7::::res://Tilesets/Water.png<>uid://cto3aekiaouob::::res://Scenes/2_Enemy.tscn
+2_player.tscn::PackedScene::4831540719970719167::1696214174::0::1::::<><>::uid://b7a4shox8f5af::::res://char.png<>res://Scripts/2_player.gd<>uid://ektgduscsrpv::::res://Sprite-0001.png<>uid://dvppiwr5c3p52::::res://Sprite-0002.png<>uid://cvnm57hmvxneg::::res://Sprite-0003.png
 Follower.tscn::PackedScene::2484938920803657075::1695245595::0::1::::<><>::res://Scripts/Follower.gd
 Main.tscn::PackedScene::6806715439510708372::1695245595::0::1::::<><>::res://Scripts/Main.gd<>uid://drbougulv8r0q
 Player.tscn::PackedScene::112477753386474292::1695595473::0::1::::<><>::res://Scripts/Player.gd
-::res://Scripts/::1695864658
+::res://Scripts/::1696214092
 2_player.gd::GDScript::-1::1695864436::0::1::::<>CharacterBody2D<>::
+Cells.gd::GDScript::-1::1696213762::0::1::::<>Node2D<>::
 EnemyController.gd::GDScript::-1::1695860164::0::1::::<>Node<>::
-Enemy_AI.gd::GDScript::-1::1695864336::0::1::::<>NavigationAgent2D<>::
-Enemy_Animation.gd::GDScript::-1::1695864658::0::1::::<>AnimatedSprite2D<>::
+Enemy_AI.gd::GDScript::-1::1696205764::0::1::::<>NavigationAgent2D<>::
+Enemy_Animation.gd::GDScript::-1::1696205382::0::1::::<>AnimatedSprite2D<>::
 Follower.gd::GDScript::-1::1695241831::0::1::::<>CharacterBody3D<>::
 Main Menu.gd::GDScript::-1::1695586871::0::1::::<>PanelContainer<>::
 Main.gd::GDScript::-1::1695243219::0::1::::<>Node<>::
 Player.gd::GDScript::-1::1695588355::0::1::::<>CharacterBody3D<>::
+TileLogic.gd::GDScript::-1::1696214092::0::1::::<>TileMap<>::
 ::res://Sprites/::1696101908
 Basic Charakter Actions.png::CompressedTexture2D::1104192021239037443::1647017940::1696101908::1::::<><>::
 Egg_And_Nest.png::CompressedTexture2D::5249223640764994282::1688792516::1696101908::1::::<><>::

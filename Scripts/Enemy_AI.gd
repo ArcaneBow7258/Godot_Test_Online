@@ -14,22 +14,23 @@ enum aggro_type{
 
 func _physics_process(delta):
 	
-		
+	
 	if(len(detected_entities) < 1): return
 	var current_location =  parent.global_transform.origin
 	detected_entities.sort_custom(func(a,b): return parent.global_position.distance_to(a) > parent.global_position.distance_to(b))
 	target_position = (detected_entities[0] as CollisionShape2D).global_position
-	if(is_target_reached()):
-		parent.velocity  = Vector2.ZERO;
-		return
-		#Attack logic?
 	var next_location = get_next_path_position()
+	
 	var new_velocity = (next_location - current_location).normalized() * SPEED
 	
 	parent.velocity = new_velocity
 
 	
-	parent.move_and_slide()
+	if(!is_target_reached()): 
+		parent.move_and_slide()
+	else:
+		#Attack logics
+		pass
 	
 func update_targes():
 	detected_entities = get_tree().get_nodes_in_group("Friendly")
@@ -45,3 +46,8 @@ func _on_detector_body_exited(body):
 	if(body.is_in_group("Friendly")):
 		detected_entities.remove_at(detected_entities.find(body))
 
+
+
+func _on_navigation_finished():
+	#print("Nav Ended")
+	pass

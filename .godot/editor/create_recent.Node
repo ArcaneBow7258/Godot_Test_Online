@@ -1,7 +1,7 @@
+Node2D
 CollisionShape2D
 Area2D
 Node
-Node2D
 NavigationAgent2D
 AnimatedSprite2D
 CharacterBody2D

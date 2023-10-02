@@ -1,4 +1,7 @@
 res://Scenes/2_Main.tscn
+res://Scripts/TileLogic.gd
 res://Scenes/2_player.tscn
 res://Scenes/2_Enemy.tscn
+res://Scripts/Cells.gd
 res://Scripts/Enemy_AI.gd
+res://Scripts/Enemy_Animation.gd
