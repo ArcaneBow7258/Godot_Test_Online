@@ -1,49 +1,49 @@
 [gd_scene load_steps=14 format=3 uid="uid://cto3aekiaouob"]
 
-[ext_resource type="Texture2D" uid="uid://21pol7vogaf5" path="res://trashmobz-alpha.png" id="1_xpag2"]
+[ext_resource type="Texture2D" uid="uid://21pol7vogaf5" path="res://Sprites/Sheets/trashmobz-alpha.png" id="1_e3ps8"]
 [ext_resource type="Script" path="res://Scripts/Enemy_Animation.gd" id="2_1l6qk"]
 [ext_resource type="Script" path="res://Scripts/Enemy_AI.gd" id="2_lbvmw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_14m6t"]
-atlas = ExtResource("1_xpag2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd80m"]
+atlas = ExtResource("1_e3ps8")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a0yob"]
-atlas = ExtResource("1_xpag2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ticrx"]
+atlas = ExtResource("1_e3ps8")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4bqbq"]
-atlas = ExtResource("1_xpag2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3aryu"]
+atlas = ExtResource("1_e3ps8")
 region = Rect2(0, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5ytuo"]
-atlas = ExtResource("1_xpag2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss7qa"]
+atlas = ExtResource("1_e3ps8")
 region = Rect2(16, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w62v5"]
-atlas = ExtResource("1_xpag2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eygl"]
+atlas = ExtResource("1_e3ps8")
 region = Rect2(0, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s4n8e"]
-atlas = ExtResource("1_xpag2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8pma"]
+atlas = ExtResource("1_e3ps8")
 region = Rect2(16, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_li6y7"]
-atlas = ExtResource("1_xpag2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_me83s"]
+atlas = ExtResource("1_e3ps8")
 region = Rect2(0, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sd1y7"]
-atlas = ExtResource("1_xpag2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bn37c"]
+atlas = ExtResource("1_e3ps8")
 region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fanqi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_14m6t")
+"texture": SubResource("AtlasTexture_jd80m")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a0yob")
+"texture": SubResource("AtlasTexture_ticrx")
 }],
 "loop": true,
 "name": &"down_m",
@@ -51,10 +51,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4bqbq")
+"texture": SubResource("AtlasTexture_3aryu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5ytuo")
+"texture": SubResource("AtlasTexture_ss7qa")
 }],
 "loop": true,
 "name": &"left_m",
@@ -62,10 +62,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w62v5")
+"texture": SubResource("AtlasTexture_4eygl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s4n8e")
+"texture": SubResource("AtlasTexture_l8pma")
 }],
 "loop": true,
 "name": &"right_m",
@@ -73,10 +73,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_li6y7")
+"texture": SubResource("AtlasTexture_me83s")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sd1y7")
+"texture": SubResource("AtlasTexture_bn37c")
 }],
 "loop": true,
 "name": &"up_m",
@@ -95,7 +95,7 @@ platform_floor_layers = 4294967264
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fanqi")
-animation = &"up_m"
+animation = &"left_m"
 autoplay = "left_m"
 script = ExtResource("2_1l6qk")
 
@@ -110,5 +110,10 @@ target_desired_distance = 64.0
 path_max_distance = 128.0
 debug_enabled = true
 script = ExtResource("2_lbvmw")
+
+[node name="damage" type="Node2D" parent="."]
+
+[node name="Rate" type="Timer" parent="damage"]
+one_shot = true
 
 [connection signal="navigation_finished" from="NavigationAgent2D" to="NavigationAgent2D" method="_on_navigation_finished"]

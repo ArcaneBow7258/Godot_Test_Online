@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://cwpecqrkq2kli"]
+
+[ext_resource type="Texture2D" uid="uid://o5vc1umwmjb3" path="res://Sprites/UI_Sprites/Sprite sheet for Basic Pack.png" id="1_piqdw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpcwu"]
+atlas = ExtResource("1_piqdw")
+region = Rect2(645, 68, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbk8d"]
+atlas = ExtResource("1_piqdw")
+region = Rect2(677, 70, 22, 22)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y7vxp"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-58199c2ad2c89d416d67b31b195af632.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anul3"]
+atlas = SubResource("CompressedTexture2D_y7vxp")
+region = Rect2(773, 68, 22, 24)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m3dv3"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-58199c2ad2c89d416d67b31b195af632.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qv0rq"]
+atlas = SubResource("CompressedTexture2D_m3dv3")
+region = Rect2(805, 70, 22, 22)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cov53"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-58199c2ad2c89d416d67b31b195af632.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8dsk"]
+atlas = SubResource("CompressedTexture2D_cov53")
+region = Rect2(200, 8, 32, 32)
+
+[node name="Container" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="Aux" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1560.0
+offset_top = 15.0
+offset_right = 1582.0
+offset_bottom = 67.0
+scale = Vector2(4, 4)
+pivot_offset = Vector2(22, 0)
+
+[node name="Settings" type="TextureButton" parent="Aux"]
+layout_mode = 2
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_kpcwu")
+texture_pressed = SubResource("AtlasTexture_wbk8d")
+
+[node name="Menu" type="TextureButton" parent="Aux"]
+layout_mode = 2
+action_mode = 0
+texture_normal = SubResource("AtlasTexture_anul3")
+texture_pressed = SubResource("AtlasTexture_qv0rq")
+
+[node name="Hotbar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -32.0
+offset_right = 64.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 4)
+pivot_offset = Vector2(64, 32)
+
+[node name="Box1" type="TextureButton" parent="Hotbar"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_v8dsk")
+
+[node name="Box2" type="TextureButton" parent="Hotbar"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_v8dsk")
+
+[node name="Box3" type="TextureButton" parent="Hotbar"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_v8dsk")
+
+[node name="Box4" type="TextureButton" parent="Hotbar"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_v8dsk")

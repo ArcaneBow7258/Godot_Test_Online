@@ -1,7 +1,9 @@
-res://Scenes/2_Main.tscn
-res://Scripts/TileLogic.gd
 res://Scenes/2_player.tscn
 res://Scenes/2_Enemy.tscn
-res://Scripts/Cells.gd
-res://Scripts/Enemy_AI.gd
+res://Scenes/2_Main.tscn
+res://TestStraw.tscn
+res://Scenes/UI.tscn
+res://Resources/basic.tres
+res://Scripts/GUI_Entity.gd
+res://Scenes/bar_manager.tscn
 res://Scripts/Enemy_Animation.gd

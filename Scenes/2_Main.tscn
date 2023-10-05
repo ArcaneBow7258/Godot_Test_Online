@@ -768,15 +768,14 @@ layer_3/tile_data = PackedInt32Array()
 script = ExtResource("3_obp1y")
 metadata/_edit_lock_ = true
 
-[node name="2_Player" parent="." instance=ExtResource("3_aks1q")]
-position = Vector2(463, 63)
-up_direction = Vector2(0, 1)
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.423529, 0.490196, 0.580392, 1)
+color = Color(0.180392, 0.219608, 0.270588, 1)
 
 [node name="2_Enemy" parent="." instance=ExtResource("4_5t0y8")]
 position = Vector2(590, 53)
+
+[node name="2_Player" parent="." instance=ExtResource("3_aks1q")]
+position = Vector2(259, 119)
 
 [connection signal="pressed" from="CanvasLayer/Main Menu/MarginContainer/VBoxContainer/Button_host" to="CanvasLayer/Main Menu" method="_on_button_host_pressed"]
 [connection signal="pressed" from="CanvasLayer/Main Menu/MarginContainer/VBoxContainer/Button_connect" to="CanvasLayer/Main Menu" method="_on_button_connect_pressed"]

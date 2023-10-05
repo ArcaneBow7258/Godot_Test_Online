@@ -18,5 +18,6 @@ func get_move_angle():
 		return "up"
 	else:
 		return "left"
-		
+
+
 	
