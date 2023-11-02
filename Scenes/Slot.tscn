@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://m5vv7frts42f"]
+
+[ext_resource type="Script" path="res://Scripts/Slot.gd" id="1_4ol0e"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cov53"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-58199c2ad2c89d416d67b31b195af632.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr5hl"]
+atlas = SubResource("CompressedTexture2D_cov53")
+region = Rect2(200, 8, 32, 32)
+
+[node name="Box4" type="TextureButton"]
+texture_normal = SubResource("AtlasTexture_jr5hl")
+script = ExtResource("1_4ol0e")

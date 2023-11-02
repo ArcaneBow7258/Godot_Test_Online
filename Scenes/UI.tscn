@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwpecqrkq2kli"]
+[gd_scene load_steps=11 format=3 uid="uid://cwpecqrkq2kli"]
 
 [ext_resource type="Texture2D" uid="uid://o5vc1umwmjb3" path="res://Sprites/UI_Sprites/Sprite sheet for Basic Pack.png" id="1_piqdw"]
+[ext_resource type="Script" path="res://Scripts/Inventory.gd" id="2_3w1wf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpcwu"]
 atlas = ExtResource("1_piqdw")
@@ -24,11 +25,11 @@ load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-58199c2ad2c89
 atlas = SubResource("CompressedTexture2D_m3dv3")
 region = Rect2(805, 70, 22, 22)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cov53"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w38op"]
 load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-58199c2ad2c89d416d67b31b195af632.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v8dsk"]
-atlas = SubResource("CompressedTexture2D_cov53")
+atlas = SubResource("CompressedTexture2D_w38op")
 region = Rect2(200, 8, 32, 32)
 
 [node name="Container" type="Control"]
@@ -71,10 +72,20 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(4, 4)
 pivot_offset = Vector2(64, 32)
+script = ExtResource("2_3w1wf")
+current_select = null
 
 [node name="Box1" type="TextureButton" parent="Hotbar"]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_v8dsk")
+
+[node name="Box Cursor" type="ReferenceRect" parent="Hotbar/Box1"]
+layout_mode = 0
+offset_left = 7.75
+offset_top = 7.75
+offset_right = 23.75
+offset_bottom = 23.75
+editor_only = false
 
 [node name="Box2" type="TextureButton" parent="Hotbar"]
 layout_mode = 2

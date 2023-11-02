@@ -30,7 +30,7 @@ signal damage(value)
 signal cast(value)
 signal deadge
 func _ready():
-	bar_resource = resouce_visible
+	bar_resource.visible = resouce_visible
 	resource_stop = !resouce_visible
 	
 func _process(delta):
@@ -40,7 +40,8 @@ func _process(delta):
 	health = clampf(health, 0, 100)
 	resource = clampf(resource, 0, 100)
 	bar_health.value = health
-	bar_resource.value = resource
+	if(resouce_visible):
+		bar_resource.value = resource
 	if Input.is_action_just_pressed("debug1"):
 		damage.emit(10)
 		print('DEBUG 1')

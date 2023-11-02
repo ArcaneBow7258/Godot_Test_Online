@@ -10,7 +10,7 @@ enum aggro_type{
 @onready var detected_entities = get_tree().get_nodes_in_group("Friendly")
 
 @onready var parent = get_parent()
-@onready var area = $Detector
+#@onready var area = $Detector
 
 func _physics_process(delta):
 	

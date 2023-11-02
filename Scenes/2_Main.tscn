@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://d1cl7g2e6lwuy"]
+[gd_scene load_steps=56 format=3 uid="uid://d1cl7g2e6lwuy"]
 
 [ext_resource type="Script" path="res://Scripts/Main Menu.gd" id="1_j4qum"]
 [ext_resource type="Texture2D" uid="uid://dm3a0yusuahnw" path="res://Tilesets/ground tiles/new tiles/Tall Grass hill tiles v.2.png" id="2_3s4mm"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://Scripts/TileLogic.gd" id="3_obp1y"]
 [ext_resource type="Texture2D" uid="uid://d1rqipvutn4x7" path="res://Tilesets/Water.png" id="3_ovxdp"]
 [ext_resource type="PackedScene" uid="uid://cto3aekiaouob" path="res://Scenes/2_Enemy.tscn" id="4_5t0y8"]
+[ext_resource type="Texture2D" uid="uid://df1wpyu6bajvd" path="res://Sprites/Items/Basic Plants.png" id="5_u12qr"]
+[ext_resource type="PackedScene" uid="uid://cwpecqrkq2kli" path="res://Scenes/UI.tscn" id="8_2mv43"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ekf6g"]
 vertices = PackedVector2Array(6, 3, 8, 3, 8, 8, 6, 8)
@@ -191,7 +193,7 @@ texture = ExtResource("2_3s4mm")
 0:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_xkymh")
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.25, -7.875, -2.25, 7.75, 2.125, 7.75, 2.125, -8)
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, -8, -2, -8, -2, 8, 2, 8)
 0:1/0/terrains_peering_bit/right_side = 0
 0:1/0/terrains_peering_bit/bottom_right_corner = 0
 0:1/0/terrains_peering_bit/top_right_corner = 0
@@ -273,7 +275,7 @@ texture = ExtResource("2_3s4mm")
 0:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_o1li1")
 0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:3/0/physics_layer_0/angular_velocity = 0.0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1, -4, 8, -4, 8, 2, 2, 2, 2, 8, -1, 8)
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -4, 8, -4, 8, 2, 2, 2, 2, 8, -2, 8)
 0:3/0/terrains_peering_bit/bottom_left_corner = 0
 0:3/0/terrains_peering_bit/left_side = 0
 0:3/0/terrains_peering_bit/top_left_corner = 0
@@ -297,7 +299,7 @@ texture = ExtResource("2_3s4mm")
 2:3/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_boq5s")
 2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:3/0/physics_layer_0/angular_velocity = 0.0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(1, -4, -8, -4, -8, 2, -2, 2, -2, 8, 1, 8)
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, -4, -8, -4, -8, 2, -2, 2, -2, 8, 2, 8)
 2:3/0/terrains_peering_bit/right_side = 0
 2:3/0/terrains_peering_bit/bottom_right_corner = 0
 2:3/0/terrains_peering_bit/top_left_corner = 0
@@ -437,7 +439,7 @@ texture = ExtResource("2_3s4mm")
 0:4/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_bu3x0")
 0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:4/0/physics_layer_0/angular_velocity = 0.0
-0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2, -8, 2, -8, 2, 8, -2, 8)
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, -8, -2, -8, -2, 8, 2, 8)
 0:4/0/terrains_peering_bit/bottom_left_corner = 0
 0:4/0/terrains_peering_bit/left_side = 0
 0:4/0/terrains_peering_bit/top_left_corner = 0
@@ -674,7 +676,7 @@ texture = ExtResource("3_ovxdp")
 3:0/0/terrains_peering_bit/top_right_corner = 2
 
 [sub_resource type="TileSet" id="TileSet_wtuoi"]
-occlusion_layer_0/light_mask = 1
+occlusion_layer_0/light_mask = 2
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 0
 terrain_set_0/mode = 0
@@ -685,19 +687,39 @@ terrain_set_0/terrain_1/color = Color(0.501961, 0.733333, 0.25098, 1)
 terrain_set_0/terrain_2/name = "water"
 terrain_set_0/terrain_2/color = Color(0.470588, 0.501961, 1, 1)
 navigation_layer_0/layers = 1
-custom_data_layer_0/name = "level"
+custom_data_layer_0/name = ""
 custom_data_layer_0/type = 2
 sources/0 = SubResource("TileSetAtlasSource_cjacn")
 sources/1 = SubResource("TileSetAtlasSource_csaxf")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_liu8g"]
+resource_name = "plant"
+texture = ExtResource("5_u12qr")
+1:0/next_alternative_id = 2
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_evtrd"]
+custom_data_layer_0/name = "test"
+custom_data_layer_0/type = 0
+sources/0 = SubResource("TileSetAtlasSource_liu8g")
 
 [node name="2_Main" type="Node2D"]
 
 [node name="EnemyController" type="Node" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
+
+[node name="Container" parent="CanvasLayer" instance=ExtResource("8_2mv43")]
 
 [node name="Main Menu" type="PanelContainer" parent="CanvasLayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -739,7 +761,7 @@ text = "Enter"
 alignment = 1
 editable = false
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Terrain" type="TileMap" parent="."]
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_wtuoi")
 format = 2
@@ -768,7 +790,14 @@ layer_3/tile_data = PackedInt32Array()
 script = ExtResource("3_obp1y")
 metadata/_edit_lock_ = true
 
+[node name="Plant" type="TileMap" parent="."]
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_evtrd")
+format = 2
+layer_0/tile_data = PackedInt32Array(2, 65536, 0, 3, 131072, 0, 4, 196608, 0, 5, 262144, 0, 196610, 65536, 1, 196611, 131072, 1, 196612, 196608, 1, 196613, 262144, 1)
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+y_sort_enabled = true
 color = Color(0.180392, 0.219608, 0.270588, 1)
 
 [node name="2_Enemy" parent="." instance=ExtResource("4_5t0y8")]
