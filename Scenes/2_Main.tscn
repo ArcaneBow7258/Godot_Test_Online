@@ -1,13 +1,13 @@
 [gd_scene load_steps=56 format=3 uid="uid://d1cl7g2e6lwuy"]
 
-[ext_resource type="Script" path="res://Scripts/Main Menu.gd" id="1_j4qum"]
+[ext_resource type="PackedScene" uid="uid://dim63nrhm1ee6" path="res://Scenes/UI_Layer.tscn" id="1_5nhe6"]
 [ext_resource type="Texture2D" uid="uid://dm3a0yusuahnw" path="res://Tilesets/ground tiles/new tiles/Tall Grass hill tiles v.2.png" id="2_3s4mm"]
 [ext_resource type="PackedScene" uid="uid://ca3o1f3xkx0e2" path="res://Scenes/2_player.tscn" id="3_aks1q"]
 [ext_resource type="Script" path="res://Scripts/TileLogic.gd" id="3_obp1y"]
 [ext_resource type="Texture2D" uid="uid://d1rqipvutn4x7" path="res://Tilesets/Water.png" id="3_ovxdp"]
 [ext_resource type="PackedScene" uid="uid://cto3aekiaouob" path="res://Scenes/2_Enemy.tscn" id="4_5t0y8"]
 [ext_resource type="Texture2D" uid="uid://df1wpyu6bajvd" path="res://Sprites/Items/Basic Plants.png" id="5_u12qr"]
-[ext_resource type="PackedScene" uid="uid://cwpecqrkq2kli" path="res://Scenes/UI.tscn" id="8_2mv43"]
+[ext_resource type="PackedScene" uid="uid://c1xahxfaobx65" path="res://Scenes/item_drop.tscn" id="8_bgq6j"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ekf6g"]
 vertices = PackedVector2Array(6, 3, 8, 3, 8, 8, 6, 8)
@@ -712,54 +712,7 @@ sources/0 = SubResource("TileSetAtlasSource_liu8g")
 
 [node name="2_Main" type="Node2D"]
 
-[node name="EnemyController" type="Node" parent="."]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Container" parent="CanvasLayer" instance=ExtResource("8_2mv43")]
-
-[node name="Main Menu" type="PanelContainer" parent="CanvasLayer"]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 427.0
-offset_top = 248.0
-offset_right = -427.0
-offset_bottom = -248.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_j4qum")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Main Menu"]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Main Menu/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 15
-
-[node name="Label" type="Label" parent="CanvasLayer/Main Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Main Menu"
-horizontal_alignment = 1
-
-[node name="Button_host" type="Button" parent="CanvasLayer/Main Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Host"
-
-[node name="Button_connect" type="Button" parent="CanvasLayer/Main Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Join"
-
-[node name="ConnectionString" type="LineEdit" parent="CanvasLayer/Main Menu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Enter"
-alignment = 1
-editable = false
+[node name="UILayer" parent="." instance=ExtResource("1_5nhe6")]
 
 [node name="Terrain" type="TileMap" parent="."]
 scale = Vector2(4, 4)
@@ -791,6 +744,7 @@ script = ExtResource("3_obp1y")
 metadata/_edit_lock_ = true
 
 [node name="Plant" type="TileMap" parent="."]
+visible = false
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_evtrd")
 format = 2
@@ -806,5 +760,5 @@ position = Vector2(590, 53)
 [node name="2_Player" parent="." instance=ExtResource("3_aks1q")]
 position = Vector2(259, 119)
 
-[connection signal="pressed" from="CanvasLayer/Main Menu/MarginContainer/VBoxContainer/Button_host" to="CanvasLayer/Main Menu" method="_on_button_host_pressed"]
-[connection signal="pressed" from="CanvasLayer/Main Menu/MarginContainer/VBoxContainer/Button_connect" to="CanvasLayer/Main Menu" method="_on_button_connect_pressed"]
+[node name="Item_Drop" parent="." instance=ExtResource("8_bgq6j")]
+position = Vector2(214, -14)

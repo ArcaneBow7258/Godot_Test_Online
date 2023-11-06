@@ -14,7 +14,7 @@ region = Rect2(200, 8, 32, 32)
 atlas = ExtResource("1_xpsf0")
 region = Rect2(152, 56, 32, 32)
 
-[node name="Slot" type="TextureButton"]
+[node name="Box4" type="TextureButton"]
 toggle_mode = true
 texture_normal = SubResource("AtlasTexture_jr5hl")
 texture_pressed = SubResource("AtlasTexture_ioffr")

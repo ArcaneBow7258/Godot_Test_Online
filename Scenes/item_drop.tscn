@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1xahxfaobx65"]
+
+[ext_resource type="Script" path="res://Scripts/Item_Drop.gd" id="1_habvs"]
+[ext_resource type="Texture2D" uid="uid://cfct3cx3segm" path="res://Sprites/Items/Egg item.png" id="2_4pcn1"]
+
+[node name="Item_Drop" type="Node2D"]
+script = ExtResource("1_habvs")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_4pcn1")
