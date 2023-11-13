@@ -115,12 +115,17 @@ Inventory={
 2d_physics/layer_3="Walls"
 2d_physics/layer_4="Player_Proj"
 2d_physics/layer_5="Enemy_Proj"
+2d_physics/layer_6="Items"
 avoidance/layer_1="Bad_Floor"
 
 [navigation]
 
 2d/default_edge_connection_margin=64
 2d/default_link_connection_radius=64
+
+[physics]
+
+2d/default_gravity=0.0
 
 [rendering]
 

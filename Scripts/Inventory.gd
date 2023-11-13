@@ -20,7 +20,8 @@ func _input(event):
 	
 	if event.is_action_pressed("Inventory"): visible = !visible
 func add_item(item):
-	var box_node = get_node("Box"+str(current_select))
+	#var box_node = get_node("Box"+str(current_select))
+	print("Added item")
 
 func swap_item(node_box):
 	if(not swap_slot): #selected 1

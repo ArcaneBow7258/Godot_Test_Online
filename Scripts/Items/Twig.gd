@@ -5,4 +5,4 @@ func _init():
 
 
 func use():
-	printerr(name + " not overwritten use()")
+	printerr(self.item_name + " not overwritten use()")

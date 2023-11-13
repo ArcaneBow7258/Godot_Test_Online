@@ -4,7 +4,6 @@ extends CharacterBody2D
 @export var SPEED = 5.0
 @onready var sprite = $Sprite
 @onready var follower_mouse = $Follower_mouse
-
 var animation_string = "down_s"
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
@@ -21,6 +20,13 @@ func _physics_process(delta):
 	animation_string = move_mouse() +  move_wasd(delta)
 	sprite.animation = animation_string
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if(collider.is_in_group("Item_Drop")):
+			UILayer.Inventory.add_item("Test")
+			#collider.queue_free()
+			collider.free()
 	
 func move_mouse():
 	#if not is_multiplayer_authority(): return

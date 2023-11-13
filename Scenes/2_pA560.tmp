@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ektgduscsrpv" path="res://Sprites/Flashlight.png" id="4_wwgh3"]
 [ext_resource type="Texture2D" uid="uid://cvnm57hmvxneg" path="res://Sprites/Direction.png" id="5_dg5vy"]
 [ext_resource type="PackedScene" uid="uid://d1ye8g2uisu2m" path="res://Scenes/bar_manager.tscn" id="6_4hmk5"]
+[ext_resource type="Script" path="res://Scripts/ItemSuck.gd" id="7_ke5qi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wk035"]
 atlas = ExtResource("2_qdsmg")
@@ -168,13 +169,9 @@ size = Vector2(11.5, 10.125)
 [sub_resource type="CircleShape2D" id="CircleShape2D_h5pf2"]
 radius = 32.0
 
-[sub_resource type="GDScript" id="GDScript_27yrv"]
-script/source = "extends CollisionShape2D
-"
-
 [node name="2_Player" type="CharacterBody2D"]
 scale = Vector2(4, 4)
-collision_mask = 36
+collision_mask = 4
 platform_on_leave = 2
 platform_floor_layers = 4294967264
 script = ExtResource("1_5tk7e")
@@ -225,8 +222,8 @@ input_pickable = false
 gravity_space_override = 1
 gravity_point = true
 gravity_point_unit_distance = 64.0
-gravity = 100.0
+gravity = 300.0
 
 [node name="Collision_Pickup" type="CollisionShape2D" parent="Area_Pickup"]
 shape = SubResource("CircleShape2D_h5pf2")
-script = SubResource("GDScript_27yrv")
+script = ExtResource("7_ke5qi")
